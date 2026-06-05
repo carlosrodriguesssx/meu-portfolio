@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio // Carlos Rodrigues</title>
+    <style>
+        /* Variáveis de cores para facilitar mudanças futuras */
+        :root {
+            --bg-principal: #0a0f1d;
+            --bg-card: #111827;
+            --texto-claro: #e2e8f0;
+            --texto-escuro: #64748b;
+            --azul-neon: #38bdf8;
+            --azul-escuro: #0284c7;
+            --borda: #1e293b;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-principal);
+            color: var(--texto-claro);
+            font-family: 'Courier New', Courier, monospace;
+            padding: 40px 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.5;
+        }
+
+        /* Seção Header / Apresentação */
+        .prefixo-terminal {
+            color: var(--texto-escuro);
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            color: var(--texto-claro);
+            margin-bottom: 20px;
+        }
+
+        h1 span {
+            color: var(--azul-neon);
+        }
+
+        /* Cursor piscando estilo terminal */
+        .cursor {
+            display: inline-block;
+            width: 12px;
+            height: 28px;
+            background-color: var(--azul-neon);
+            margin-left: 5px;
+            animation: piscar 1s infinite;
+            vertical-align: middle;
+        }
+
+        @keyframes piscar {
+            0%, 100% { opacity: 0; }
+            50% { opacity: 1; }
+        }
+
+        .introducao {
+            font-size: 1.1rem;
+            color: var(--texto-claro);
+            margin-bottom: 30px;
+        }
+
+        .introducao em {
+            color: var(--azul-neon);
+            font-style: normal;
+        }
+
+        /* Tags de Status */
+        .status-container {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+            color: var(--texto-escuro);
+            font-size: 0.85rem;
+        }
+
+        .status-item::before {
+            content: "• ";
+            color: var(--azul-neon);
+        }
+
+        /* A Ficha Estilo Terminal */
+        .ficha-sistema {
+            border: 1px solid var(--borda);
+            border-radius: 6px;
+            background-color: var(--bg-card);
+            overflow: hidden;
+            margin-bottom: 40px;
+        }
+
+        .ficha-header {
+            background-color: #0f172a;
+            padding: 10px 15px;
+            border-bottom: 1px solid var(--borda);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .ficha-botoes {
+            display: flex;
+            gap: 6px;
+        }
+
+        .ficha-botoes .bola {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: var(--borda);
+        }
+
+        .ficha-botoes .bola.azul {
+            background-color: var(--azul-neon);
+        }
+
+        .ficha-titulo {
+            color: var(--texto-escuro);
+            font-size: 0.8rem;
+        }
+
+        .ficha-tabela {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .ficha-tabela td {
+            padding: 12px 20px;
+            border-bottom: 1px solid #1e293b;
+            font-size: 0.95rem;
+        }
+
+        .ficha-tabela tr:last-child td {
+            border-bottom: none;
+        }
+
+        .col-chave {
+            color: var(--texto-escuro);
+            width: 30%;
+            text-transform: uppercase;
+        }
+
+        .col-valor {
+            color: var(--texto-claro);
+        }
+
+        .status-online {
+            color: #38bdf8;
+            font-weight: bold;
+        }
+
+        /* Seção Sobre / Conteúdo */
+        .secao-titulo {
+            color: var(--texto-escuro);
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+            border-bottom: 1px dashed var(--borda);
+            padding-bottom: 5px;
+        }
+
+        .texto-sobre {
+            color: var(--texto-claro);
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="prefixo-terminal">PRINT('OLÁ MUNDO')</div>
+    <h1>meu nome é <span>[Carlos Rodrigues]</span><span class="cursor"></span></h1>
+
+    <p class="introducao">
+        Dedico meus estudos à área de <em>Cibersegurança</em> e <em>Desenvolvimento</em>, sempre focado em desvendar o funcionamento de sistemas, redes e proteção de dados. Construindo uma base sólida para o futuro.
+    </p>
+
+    <div class="status-container">
+        <span class="status-item">Sao Miguel do tapuio - BR</span>
+        <span class="status-item">ESTUDANTE DE TI</span>
+        <span class="status-item">REMOTO</span>
+    </div>
+
+    <div class="ficha-sistema">
+        <div class="ficha-header">
+            <div class="ficha-botoes">
+                <div class="bola azul"></div>
+                <div class="bola"></div>
+                <div class="bola"></div>
+            </div>
+            <div class="ficha-titulo">// FICHA DO SISTEMA</div>
+            <div class="ficha-titulo">v1.0.0</div>
+        </div>
+        <table class="ficha-tabela">
+            <tr>
+                <td class="col-chave">NICKNAME</td>
+                <td class="col-valor">[C rodriguez]</td>
+            </tr>
+            <tr>
+                <td class="col-chave">FUNÇÃO</td>
+                <td class="col-valor">Securtiy Student / Dev</td>
+            </tr>
+            <tr>
+                <td class="col-chave">BASE</td>
+                <td class="col-valor">Brasil (utc-03)</td>
+            </tr>
+            <tr>
+                <td class="col-chave">STACK</td>
+                <td class="col-valor">Linux · HTML · CSS · Git</td>
+            </tr>
+            <tr>
+                <td class="col-chave">STATUS</td>
+                <td class="col-valor"><span class="status-online">● online</span></td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="secao-titulo">01 // SOBRE MIM</div>
+    <p class="texto-sobre">
+        Sou extremamente curioso e focado em solucionar problemas complexos. Minha jornada começou desbravando o terminal Linux e entendendo os pilares da segurança digital. Atualmente, estou unindo esses conhecimentos com programação para criar ferramentas próprias e documentar meu progresso de forma totalmente transparente e profissional.
+    </p>
+
+</body>
+</html>
